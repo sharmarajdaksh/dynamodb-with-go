@@ -42,9 +42,7 @@ func putKeyValueItem(svc *dynamodb.DynamoDB, tbl string, p pair) error {
 	if err != nil {
 		return err
 	}
-
-	ip := &dynamodb.PutItemInput{
-		Item:      av,
+	ip := &dynamodb.PutItemInput{ Item:      av,
 		TableName: aws.String(tbl),
 	}
 
